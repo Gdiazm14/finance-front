@@ -1,0 +1,233 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+}
+
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--primary);
+  color: #F8F4E3;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover { opacity: 0.9; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: opacity 0.2s;
+}
+
+.cardInactive {
+  opacity: 0.5;
+  border-color: var(--secondary);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 8px;
+}
+
+.cardType {
+  font-size: 12px;
+  color: var(--secondary);
+  margin: 0 0 2px;
+  text-transform: uppercase;
+}
+
+.cardName {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+}
+
+.cardActions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.actionBtn:hover {
+  background-color: var(--accent);
+}
+
+.balance {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+
+.balanceNegative {
+  color: #dc2626;
+}
+
+.balanceLabel {
+  font-size: 11px;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.inactiveLabel {
+  font-size: 11px;
+  color: #dc2626;
+  margin: 0;
+}
+
+/* ── Modal ───────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.modal {
+  background: var(--background);
+  border-radius: 12px;
+  border: 1px solid var(--primary);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.modalTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 1.25rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  background-color: var(--background);
+  color: var(--text);
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--secondary);
+}
+
+.checkboxField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 1.25rem;
+}
+
+.btnCancel {
+  padding: 8px 16px;
+  background: none;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btnSave {
+  padding: 8px 16px;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #F8F4E3;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnSave:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  font-size: 13px;
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.loading {
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

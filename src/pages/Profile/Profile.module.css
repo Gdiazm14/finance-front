@@ -1,0 +1,94 @@
+.container {
+  max-width: 520px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 2rem;
+}
+
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background-color: var(--background);
+  color: var(--text);
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.field input:focus {
+  border-color: var(--primary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1.25rem;
+}
+
+.btnPrimary {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success {
+  font-size: 13px;
+  color: var(--primary);
+}
+
+.error {
+  font-size: 13px;
+  color: #dc2626;
+}

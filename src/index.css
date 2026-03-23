@@ -1,0 +1,34 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text: #151613;
+  --background: #F8F4E3;
+  --primary: #004f39;
+  --secondary: #2d7a5f;
+  --accent: #FFFACA;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #F8F4E3;
+    --background: #151613;
+    --primary: #004f39;
+    --secondary: #2d7a5f;
+    --accent: #FFFACA;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background-color: var(--background);
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

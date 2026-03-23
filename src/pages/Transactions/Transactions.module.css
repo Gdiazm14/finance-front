@@ -1,0 +1,316 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+}
+
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--primary);
+  color: #F8F4E3;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover { opacity: 0.9; }
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.filters select,
+.filters input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-size: 13px;
+  background-color: var(--background);
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+}
+
+.btnClear {
+  padding: 8px 12px;
+  background: none;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--primary);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnClear:hover { opacity: 0.7; }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.transactionCard {
+  background-color: var(--background);
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.transactionLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.typeIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.typeIconIncome { background-color: #dcfce7; }
+.typeIconExpense { background-color: #fee2e2; }
+.typeIconTransfer { background-color: #e0f2fe; }
+
+.transactionInfo {
+  min-width: 0;
+}
+
+.transactionNote {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.transactionMeta {
+  font-size: 12px;
+  color: var(--secondary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.transactionAmount {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.amountIncome { color: #004f39; }
+.amountExpense { color: #dc2626; }
+.amountTransfer { color: #0369a1; }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.pageBtn {
+  padding: 6px 14px;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  background: none;
+  color: var(--primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.pageBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+.empty {
+  font-size: 14px;
+  color: var(--secondary);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.loading {
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+/* ── Modal ───────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.modal {
+  background: var(--background);
+  border-radius: 12px;
+  border: 1px solid var(--primary);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 1.25rem;
+}
+
+.typeSelector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.typeBtn {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background: none;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.typeBtnActive {
+  background-color: var(--primary);
+  color: #F8F4E3;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  background-color: var(--background);
+  color: var(--text);
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--secondary);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 1.25rem;
+}
+
+.btnCancel {
+  padding: 8px 16px;
+  background: none;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btnSave {
+  padding: 8px 16px;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #F8F4E3;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnSave:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  font-size: 13px;
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters select,
+  .filters input[type="date"] {
+    width: 100%;
+  }
+}
