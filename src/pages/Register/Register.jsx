@@ -54,7 +54,7 @@ export default function Register() {
             <input
               type="text"
               name="name"
-              placeholder="Tu nombre"
+              placeholder="Nombre"
               value={form.name}
               onChange={handleChange}
               required
@@ -66,7 +66,7 @@ export default function Register() {
             <input
               type="email"
               name="email"
-              placeholder="tu@email.com"
+              placeholder="example@email.com"
               value={form.email}
               onChange={handleChange}
               required
